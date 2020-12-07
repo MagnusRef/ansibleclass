@@ -6,6 +6,7 @@
       ping:
       when: ansible_system == "Linux"
       ignore_errors: True
+
     - name: Winping
       win_ping:
       when´: ansible_syste, == "Win32NT"
