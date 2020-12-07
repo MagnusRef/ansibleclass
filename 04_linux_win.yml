@@ -9,5 +9,5 @@
 
     - name: Winping
       win_ping:
-      when: ansible_syste, == "Win32NT"
+      when: ansible_system == "Win32NT"
       ignore_errors: True
