@@ -1,5 +1,5 @@
 ---
-- hosts: tag_solution_webserver_webuser3
+- hosts: webserver_7a8c
   become: yes
   vars:
     websiteheader: "Ansible Playbook"
