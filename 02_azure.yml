@@ -36,12 +36,12 @@
           delete: ansibletraining
       register: webserver_pub_ip
 
-  - name: Create Security Group for webserver
-    azure_rm_securitygroup:
-      resource_group: "{{ resource_group }}"
-      name: "webserver_securitygroup"
-      purge_rules: yes
-      rules:
+    - name: Create Security Group for webserver
+      azure_rm_securitygroup:
+        resource_group: "{{ resource_group }}"
+        name: "webserver_securitygroup"
+        purge_rules: yes
+        rules:
           - name: Allow_SSH
             protocol: Tcp
             destination_port_range: 22
@@ -54,7 +54,7 @@
             access: Allow
             priority: 101
             direction: Inbound
-      tags:
+        tags:
           solution: "webserver_{{ user }}"
           delete: ansibletraining
 
