@@ -1,0 +1,7 @@
+plugin: vmware_vm_inventory
+strict: False
+hostname: "vcenter.ansible.local"
+username: "user3@vsphere.local"
+password: "Password1!"
+validate_certs: False
+with_tags: True
